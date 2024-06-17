@@ -4,38 +4,15 @@ import Link from "next/link";
 export default function Component() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="fixed top-0 left-0 w-full z-50 bg-gray-950 bg-opacity-50 backdrop-blur-sm">
-        <div className="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
-          <Link href="#" className="text-gray-50 font-bold text-lg" prefetch={false}>
-            SYSON
-          </Link>
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link href="#" className="text-gray-400 hover:text-gray-50 transition-colors" prefetch={false}>
-              Home
-            </Link>
-            <Link href="#" className="text-gray-400 hover:text-gray-50 transition-colors" prefetch={false}>
-              About
-            </Link>
-            <Link href="#" className="text-gray-400 hover:text-gray-50 transition-colors" prefetch={false}>
-              Work
-            </Link>
-            <Link href="#" className="text-gray-400 hover:text-gray-50 transition-colors" prefetch={false}>
-              Contact
-            </Link>
-          </nav>
-          <button className="md:hidden text-gray-400 hover:text-gray-50 transition-colors">
-            <MenuIcon className="h-6 w-6" />
-          </button>
-        </div>
-      </header>
       <main className="flex-1">
         <section className="relative h-[100dvh] flex items-center justify-center">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
             <source src="/hero-video.mp4" type="video/mp4" />
           </video>
           <div className="relative z-10 text-center space-y-4 text-gray-50">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">SYSON</h1>
-            <p className="text-xl md:text-2xl">UI Developer &amp; Publisher</p>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">Lorem Ipsum</h1>
+            <p className="text-xl md:text-2xl">Lorem Ipsum</p>
+            {/* <p className="text-xl md:text-2xl">UI Developer &amp; Publisher</p> */}
           </div>
         </section>
         <section className="py-24 bg-gray-950">
@@ -43,7 +20,7 @@ export default function Component() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-50">Featured Work</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="group relative overflow-hidden rounded-lg">
-                <img
+                <Image
                   src="/placeholder.svg"
                   width={800}
                   height={600}
@@ -55,7 +32,7 @@ export default function Component() {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-lg">
-                <img
+                <Image
                   src="/placeholder.svg"
                   width={800}
                   height={600}
@@ -67,7 +44,7 @@ export default function Component() {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-lg">
-                <img
+                <Image
                   src="/placeholder.svg"
                   width={800}
                   height={600}
@@ -79,7 +56,7 @@ export default function Component() {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-lg">
-                <img
+                <Image
                   src="/placeholder.svg"
                   width={800}
                   height={600}
@@ -91,7 +68,7 @@ export default function Component() {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-lg">
-                <img
+                <Image
                   src="/placeholder.svg"
                   width={800}
                   height={600}
@@ -103,7 +80,7 @@ export default function Component() {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-lg">
-                <img
+                <Image
                   src="/placeholder.svg"
                   width={800}
                   height={600}
@@ -130,7 +107,10 @@ export default function Component() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="space-y-8">
-                <h3 className="text-3xl md:text-4xl font-bold text-gray-50">Project 1: Web Publishing</h3>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-50">
+                  Lorem Ipsum
+                  {/* Project 1: Web Publishing */}
+                </h3>
                 <p className="text-gray-400">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                   industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
@@ -155,7 +135,10 @@ export default function Component() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:flex-row-reverse">
               <div className="space-y-8">
-                <h3 className="text-3xl md:text-4xl font-bold text-gray-50">Project 2: Product UI Develop</h3>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-50">
+                  Lorem Ipsum
+                  {/*Project 2: Product UI Develop*/}
+                </h3>
                 <p className="text-gray-400">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                   industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
@@ -180,7 +163,10 @@ export default function Component() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="space-y-8">
-                <h3 className="text-3xl md:text-4xl font-bold text-gray-50">Project 3: Design Style System</h3>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-50">
+                  Lorem Ipsum
+                  {/*Project 3: Design Style System*/}
+                </h3>
                 <p className="text-gray-400">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                   industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
@@ -204,7 +190,7 @@ export default function Component() {
       </main>
       <footer className="bg-gray-950 py-12">
         <div className="container mx-auto px-4 md:px-6 text-center text-gray-400">
-          <p>&copy; 2024 SYSON. All rights reserved.</p>
+          <p>&copy; 2024 Demo. All rights reserved.</p>
         </div>
       </footer>
     </div>
