@@ -1,10 +1,20 @@
+"use client";
 import Link from "next/link";
+import styled from "styled-components";
+import { usePathname } from "next/navigation";
+import link from "next/link";
 
 export default function Navigation() {
+  const pathname = usePathname();
+
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-gray-950 bg-opacity-50 backdrop-blur-sm">
       <div className="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-gray-50 font-bold text-lg" prefetch={false}>
+        <Link
+          href="/"
+          // className={`text-gray-50 font-bold text-lg ${pathname === Link.href ? "bg-sky-100 text-blue-500" : ""}`}
+          prefetch={false}
+        >
           Logo
         </Link>
         <nav className="hidden md:flex items-center space-x-6">
