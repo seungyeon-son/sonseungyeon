@@ -18,13 +18,13 @@ export default function Navigation() {
           Logo
         </Link>
         <nav className="hidden md:flex items-center space-x-6">
-          <Link href="#" className="text-gray-400 hover:text-gray-50 transition-colors" prefetch={false}>
+          <Link href="/about" className="text-gray-400 hover:text-gray-50 transition-colors" prefetch={false}>
             About
           </Link>
           <Link href="/archive" className="text-gray-400 hover:text-gray-50 transition-colors" prefetch={false}>
             Work
           </Link>
-          <Link href="#" className="text-gray-400 hover:text-gray-50 transition-colors" prefetch={false}>
+          <Link href="/contact" className="text-gray-400 hover:text-gray-50 transition-colors" prefetch={false}>
             Contact
           </Link>
         </nav>
