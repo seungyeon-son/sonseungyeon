@@ -6,7 +6,7 @@ const PageLayout = (props: { children: React.ReactNode }) => {
     <Centering>
       <FixedWidth>
         {props.children}
-        {/* <Header /> */}
+        <Header />
       </FixedWidth>
     </Centering>
   );

@@ -1,4 +1,16 @@
+import AppLayout from "@/app/\bcomponents/layout/Layout";
+import styled from "@emotion/styled";
+
 const ArchivePage = () => {
-  return <p className="bg-gray-500">Archive Page</p>;
+  return (
+    <AppLayout>
+      <h1>Archiving Works.</h1>
+      <Panel></Panel>
+    </AppLayout>
+  );
 };
 export default ArchivePage;
+
+const Panel = styled.div`
+  background: #fff;
+`;
