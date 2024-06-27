@@ -13,6 +13,7 @@ const Centering = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
+  min-height: 100svh;
 `;
 const FixedWidth = styled.div`
   width: 1280px;
