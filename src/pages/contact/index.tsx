@@ -1,4 +1,7 @@
+import AppLayout from "@/app/\bcomponents/layout/Layout";
+import PageLayout from "@/app/\bcomponents/layout/subLayout";
+
 const ContactPage = () => {
-  return <p className="bg-gray-500">contact Page</p>;
+  return <PageLayout>contact Page</PageLayout>;
 };
 export default ContactPage;

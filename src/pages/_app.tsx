@@ -6,6 +6,7 @@ import AppLayout from "@/app/\bcomponents/layout/Layout";
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
 import { NextPage } from "next";
 import { Children, ReactElement, ReactNode } from "react";
+import Header from "@/app/\bcomponents/ui/Header";
 
 // export default function App({ Component, pageProps }: AppProps) {
 //   return (
@@ -35,6 +36,7 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return getLayout(
     <AppLayout>
+      <Header />
       <PageLayout children={true} />
       <Component {...pageProps} />
     </AppLayout>,

@@ -1,4 +1,6 @@
+import PageLayout from "@/app/\bcomponents/layout/subLayout";
+
 const AboutPage = () => {
-  return <p className="bg-gray-500">Archive Page</p>;
+  return <PageLayout>About Page</PageLayout>;
 };
 export default AboutPage;
