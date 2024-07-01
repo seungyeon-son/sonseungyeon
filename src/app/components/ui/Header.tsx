@@ -38,7 +38,7 @@ export default function Navigation() {
   );
 }
 
-const HeaderArea = styled.header`
+export const HeaderArea = styled.header`
   position: fixed;
   top: 24px;
   left: 24px;

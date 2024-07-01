@@ -36,8 +36,6 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return getLayout(
     <AppLayout>
-      <Header />
-      <PageLayout children={true} />
       <Component {...pageProps} />
     </AppLayout>,
   );

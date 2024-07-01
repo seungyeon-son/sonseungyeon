@@ -13,11 +13,13 @@ const Centering = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
-  min-height: 100svh;
+  height: 100%;
 `;
 const FixedWidth = styled.div`
   width: 1280px;
+  height: 100%;
   overflow: hidden;
+
   @media (max-width: 500px) {
     width: 100%;
   }
