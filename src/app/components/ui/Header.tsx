@@ -19,13 +19,25 @@ export default function Navigation() {
           Logo
         </Link>
         <nav className="hidden md:flex items-center space-x-6">
-          <Link href="/about" className="text-slate-400 hover:text-slate-50 transition-colors" prefetch={false}>
+          <Link
+            href="/about"
+            className="text-slate-400 hover:text-slate-50 mix-blend-difference transition-colors"
+            prefetch={false}
+          >
             About
           </Link>
-          <Link href="/archive" className="text-slate-400 hover:text-slate-50 transition-colors" prefetch={false}>
+          <Link
+            href="/archive"
+            className="text-slate-400 hover:text-slate-50 mix-blend-difference transition-colors"
+            prefetch={false}
+          >
             Work
           </Link>
-          <Link href="/contact" className="text-slate-400 hover:text-slate-50 transition-colors" prefetch={false}>
+          <Link
+            href="/contact"
+            className="text-slate-400 hover:text-slate-50 mix-blend-difference transition-colors"
+            prefetch={false}
+          >
             Contact
           </Link>
         </nav>
@@ -40,10 +52,12 @@ export default function Navigation() {
 
 export const HeaderArea = styled.header`
   position: fixed;
-  top: 24px;
-  left: 24px;
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 50;
-  width: calc(100% - 48px);
+  width: 100%;
+  max-width: 1536px;
   height: 56px;
   border-radius: 12px;
   background: linear-gradient(90deg, rgba(51, 65, 85, 0.5) 0%, rgba(148, 151, 189, 0.25) 100%);
