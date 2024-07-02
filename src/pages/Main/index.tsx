@@ -7,7 +7,7 @@ import { IconAuto } from "../../../public/icons";
 
 const MainPage = () => {
   return (
-    <AppLayout>
+    <PageLayout>
       <MainSection className="dark bg-slate-900 text-white">
         <section className="container mx-auto pt-[240px] px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -26,7 +26,7 @@ const MainPage = () => {
             </div>
             <div className="flex justify-center">
               <img
-                src="/placeholder.svg"
+                src="https://generated.vusercontent.net/placeholder.svg"
                 width="550"
                 height="550"
                 alt="Hero"
@@ -224,7 +224,7 @@ const MainPage = () => {
           <p>&copy; 2024 Demo. All rights reserved.</p>
         </div>
       </footer>
-    </AppLayout>
+    </PageLayout>
   );
 };
 export default MainPage;

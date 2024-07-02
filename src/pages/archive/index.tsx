@@ -8,8 +8,10 @@ import PostItem from "./post";
 const Posts: FC<PostsProps> = ({ posts }) => {
   return (
     <PageLayout>
-      Archive Page
-      <PostList>{posts && posts.map((post) => <PostItem key={post.id} post={post} />)}</PostList>
+      <Panel className="container mx-auto">
+        Archive Page
+        <PostList>{posts && posts.map((post) => <PostItem key={post.id} post={post} />)}</PostList>
+      </Panel>
     </PageLayout>
   );
 };
@@ -20,14 +22,16 @@ const ArchivePage = () => {
 
 export default ArchivePage;
 
-const ArchivePageWrapper = styled.div`
+const Panel = styled.div`
   background: var(--slate-500);
-  width: 100%;
   min-height: 100vh;
-  padding-top: 120px;
+  padding-top: 160px;
 `;
 
 const PostList = styled.ul`
+  display: flex;
+  justify-content: center;
+  gap: 24px;
   list-style: none;
   padding: 0;
   margin: 0;
