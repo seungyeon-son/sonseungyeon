@@ -2,7 +2,6 @@
 import Link from "next/link";
 import styled from "styled-components";
 import { usePathname } from "next/navigation";
-import link from "next/link";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -18,26 +17,14 @@ export default function Navigation() {
         >
           Logo
         </Link>
-        <nav className="hidden md:flex items-center space-x-6">
-          <Link
-            href="/about"
-            className="text-slate-400 hover:text-slate-50 mix-blend-difference transition-colors"
-            prefetch={false}
-          >
+        <nav className="hidden md:flex items-center space-x-10">
+          <Link href="/about" className="text-slate-300 hover:text-slate-50 transition-colors" prefetch={false}>
             About
           </Link>
-          <Link
-            href="/archive"
-            className="text-slate-400 hover:text-slate-50 mix-blend-difference transition-colors"
-            prefetch={false}
-          >
+          <Link href="/archive" className="text-slate-300 hover:text-slate-50 transition-colors" prefetch={false}>
             Work
           </Link>
-          <Link
-            href="/contact"
-            className="text-slate-400 hover:text-slate-50 mix-blend-difference transition-colors"
-            prefetch={false}
-          >
+          <Link href="/contact" className="text-slate-300 hover:text-slate-50 transition-colors" prefetch={false}>
             Contact
           </Link>
         </nav>
@@ -50,7 +37,7 @@ export default function Navigation() {
   );
 }
 
-export const HeaderArea = styled.header`
+const HeaderArea = styled.header`
   position: fixed;
   top: 48px;
   left: 50%;
@@ -58,19 +45,36 @@ export const HeaderArea = styled.header`
   z-index: 50;
   width: 100%;
   max-width: 1536px;
-  height: 56px;
+  height: 64px;
   border-radius: 12px;
   background: linear-gradient(90deg, rgba(51, 65, 85, 0.5) 0%, rgba(148, 151, 189, 0.25) 100%);
   box-shadow: 0px 0px 1px 1px rgb(108 123 134 / 20%);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(20px);
+  mix-blend-mode: difference;
   display: flex;
   align-items: center;
+
   div {
     width: 100%;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media (max-width: 1080px) {
+    top: 16px;
+    width: calc(100% - 32px);
+    div {
+      padding: 0 24px;
+    }
+  }
+  @media (max-width: 640px) {
+    top: 16px;
+    width: calc(100% - 32px);
+    div {
+      padding: 0 24px;
+    }
   }
 `;
