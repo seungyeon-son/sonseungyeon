@@ -14,6 +14,7 @@ const Centering = styled.div`
   justify-content: center;
   overflow: hidden;
   height: 100%;
+  background: linear-gradient(#0f172a 70%, #2a3858 100%);
 `;
 const FixedWidth = styled.div`
   width: 1280px;

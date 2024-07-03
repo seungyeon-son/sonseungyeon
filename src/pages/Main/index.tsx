@@ -8,7 +8,7 @@ import { IconAuto } from "../../../public/icons";
 const MainPage = () => {
   return (
     <PageLayout>
-      <MainSection className="dark bg-slate-900 text-white">
+      <MainSection className="dark bg-[linear-gradient(#0f172a_70%,#2a3858_100%)] text-white">
         <section className="container mx-auto pt-[240px] px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             <div className="space-y-4">
