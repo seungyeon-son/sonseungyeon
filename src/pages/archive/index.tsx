@@ -31,7 +31,7 @@ const Panel = styled.div`
 const PostList = styled.ul`
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 36px;
   list-style: none;
   padding: 0;
   margin: 0;

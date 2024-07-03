@@ -18,7 +18,7 @@ export const PostItem: FC<PostItemProps> = ({ post }) => {
   return (
     <PostItems>
       <Link href={`/archive/${encodeURIComponent(post.slug)}`}>
-        <Thumbnail src={post.thumbnail} alt={post.title} />
+        <Thumbnail image={post.thumbnail} />
         <h2>{post.title}</h2>
         <p>{post.description}</p>
       </Link>
@@ -29,15 +29,29 @@ export const PostItem: FC<PostItemProps> = ({ post }) => {
 export default PostItem;
 
 const PostItems = styled.li`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid #000;
+  h2 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #fefefe;
+    padding: 0 8px;
+  }
+  p {
+    font-size: 14px;
+    color: #d9d9d9;
+    padding: 0 8px;
+  }
 `;
 
-const Thumbnail = styled.img`
-  width: 120px;
-  height: 120px;
+const Thumbnail = styled.div<{ image: string }>`
+  width: 100%;
+  height: 260px;
   object-fit: cover;
-  border-radius: 5px;
-  margin-right: 10px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  background: url(${(props) => props.image}) no-repeat;
+  background-size: cover;
+  background-position: center;
 `;

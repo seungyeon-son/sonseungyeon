@@ -30,8 +30,11 @@ const PostPage = () => {
       <ThumbnailBg image={post.thumbnail} />
 
       <Panel className="container mx-auto">
-        <h2>{post.title}</h2>
-        <p>{post.description}</p>
+        <PostHeader>
+          <h2>{post.title}</h2>
+          <p>{post.description}</p>
+        </PostHeader>
+
         <a href="https://www.supernova.io/forge" target="_blank" rel="noopener noreferrer">
           reference 1
         </a>
@@ -55,8 +58,25 @@ const Panel = styled.div`
 const ThumbnailBg = styled.div<{ image: string }>`
   width: 100%;
   height: 320px;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background: url(${(props) => props.image}) no-repeat;
   background-size: cover;
   background-position: top;
+  filter: blur(20px);
+  margin-bottom: 68px;
+`;
+
+const PostHeader = styled.div`
+  text-align: center;
+  color: aliceblue;
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 18px;
+    color: #c6c6c6;
+  }
 `;
