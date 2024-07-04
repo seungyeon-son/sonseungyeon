@@ -19,7 +19,7 @@ export const archivePosts: PostTypes[] = [
     slug: "1",
     title: "First Post",
     thumbnail:
-      "https://cdn.prod.website-files.com/63340e4175515b8b5cefdbd4/6579c88a686c69936a209fcd_onesignal-supernova-case-study-header.png", // 적절한 이미지 경로로 수정하세요
+      "https://cdn.prod.website-files.com/63340e4175515b8b5cefdbd4/6579c88a686c69936a209fcd_onesignal-supernova-case-study-header.png",
     description: "This is the description of the first post.",
   },
   {
