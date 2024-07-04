@@ -1,3 +1,3 @@
-import IconInfo from "./info.svg";
+import IconAuto from "./icon_automation.svg";
 
-export { IconInfo };
+export { IconAuto };
