@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
-import Link from "next/link";
 import { FC, Key } from "react";
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
 import { archivePosts, PostsProps } from "./data";
 import PostItem from "./post";
+import { motion } from "framer-motion";
 
 const Posts: FC<PostsProps> = ({ posts }) => {
   return (
@@ -11,6 +11,18 @@ const Posts: FC<PostsProps> = ({ posts }) => {
       <Panel className="container mx-auto">
         Archive Page
         <PostList>{posts && posts.map((post) => <PostItem key={post.id} post={post} />)}</PostList>
+        <motion.div
+          className="box bg-slate-500"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
+          dd
+        </motion.div>
       </Panel>
     </PageLayout>
   );
