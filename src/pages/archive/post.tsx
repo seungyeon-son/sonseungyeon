@@ -8,6 +8,7 @@ interface Post {
   title: string;
   thumbnail: string;
   description: string;
+  tag: string;
 }
 
 interface PostItemProps {
@@ -19,6 +20,7 @@ export const PostItem: FC<PostItemProps> = ({ post }) => {
     <PostItems>
       <Link href={`/archive/${encodeURIComponent(post.slug)}`}>
         <Thumbnail image={post.thumbnail} />
+        <div className="tag">{post.tag}</div>
         <h2>{post.title}</h2>
         <p>{post.description}</p>
       </Link>
@@ -32,15 +34,26 @@ const PostItems = styled.li`
   width: 100%;
   display: flex;
   flex-direction: column;
+  div.tag {
+    font-size: 14px;
+    color: #c0c0c0;
+    background: #54525c;
+    width: fit-content;
+    border-radius: 6px;
+    padding: 0 6px;
+    margin: 0 6px 12px;
+  }
   h2 {
     font-weight: 600;
     font-size: 16px;
     color: #fefefe;
     padding: 0 8px;
+    margin-bottom: 4px;
   }
   p {
     font-size: 14px;
-    color: #d9d9d9;
+    line-height: 1.35rem;
+    color: #c0c0c0;
     padding: 0 8px;
   }
 `;
