@@ -38,24 +38,25 @@ export default function Navigation() {
 }
 
 const HeaderArea = styled.header`
-  position: fixed;
-  top: 48px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 50;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
-  max-width: 1536px;
-  height: 64px;
-  border-radius: 12px;
-  background: linear-gradient(90deg, rgba(51, 65, 85, 0.5) 0%, rgba(148, 151, 189, 0.25) 100%);
-  box-shadow: 0px 0px 1px 1px rgb(108 123 134 / 20%);
-  backdrop-filter: blur(20px);
+  z-index: 9999;
   mix-blend-mode: difference;
-  display: flex;
-  align-items: center;
-
-  div {
+  div.container {
+    position: fixed;
+    top: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
     width: 100%;
+    max-width: 1536px;
+    height: 64px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, rgba(51, 65, 85, 0.5) 0%, rgba(148, 151, 189, 0.25) 100%);
+    box-shadow: 0px 0px 1px 1px rgb(108 123 134 / 20%);
+    backdrop-filter: blur(20px);
     margin: 0 auto;
     padding: 0 48px;
     display: flex;
