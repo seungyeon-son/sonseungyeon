@@ -20,8 +20,24 @@ const MainPage = () => {
                 Open Source.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
-                <Button>Get Started</Button>
-                <Button variant="secondary">Learn More</Button>
+                <Button
+                  size={"sm"}
+                  variant={"primary"}
+                  onClick={() => (location.href = "/")}
+                  value={""}
+                  disabled={false}
+                >
+                  Get Started
+                </Button>
+                <Button
+                  size={"sm"}
+                  variant={"primary"}
+                  onClick={() => (location.href = "/")}
+                  value={""}
+                  disabled={false}
+                >
+                  Learn More
+                </Button>
               </div>
             </div>
             <div className="flex justify-center">
@@ -156,9 +172,7 @@ const MainPage = () => {
               </p>
               <div className="flex items-center space-x-4">
                 <button className="text-white/80 border">View Project</button>
-                <button className="text-white bg-white/20" variant="secondary">
-                  Learn More
-                </button>
+                <button className="text-white bg-white/20">Learn More</button>
               </div>
             </div>
             <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-lg"></div>
@@ -180,9 +194,7 @@ const MainPage = () => {
               </p>
               <div className="flex items-center space-x-4">
                 <button className="text-[#eee] border">View Project</button>
-                <button className="text-white bg-white/20" variant="secondary">
-                  Learn More
-                </button>
+                <button className="text-white bg-white/20">Learn More</button>
               </div>
             </div>
             <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-lg"></div>
@@ -204,7 +216,13 @@ const MainPage = () => {
               </p>
               <div className="flex items-center space-x-4">
                 <button className="text-[#eee] border">View Project</button>
-                <Button className="text-white bg-white/20" variant="secondary">
+                <Button
+                  size={"sm"}
+                  variant={"primary"}
+                  onClick={() => (location.href = "/")}
+                  value={""}
+                  disabled={false}
+                >
                   Learn More
                 </Button>
               </div>
