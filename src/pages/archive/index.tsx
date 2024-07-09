@@ -1,18 +1,22 @@
 import styled from "@emotion/styled";
-import { FC, Key } from "react";
-import PageLayout from "@/app/\bcomponents/layout/subLayout";
-import { archivePosts, PostsProps } from "./data";
-import PostItem from "./post";
+import { FC } from "react";
 import { motion } from "framer-motion";
+
+import PostItem from "./post";
+
+import PageLayout from "@/app/\bcomponents/layout/subLayout";
+
+import { archivePosts, PostsProps } from "./data";
 
 const Posts: FC<PostsProps> = ({ posts }) => {
   return (
     <PageLayout>
       <Panel className="container mx-auto">
-        Archive Page
-        <PostList>{posts && posts.map((post) => <PostItem key={post.id} post={post} />)}</PostList>
+        <PageHeader>
+          <h1>W. Page</h1>
+        </PageHeader>
         <motion.div
-          className="box bg-slate-500"
+          className="box un-blur"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -21,7 +25,7 @@ const Posts: FC<PostsProps> = ({ posts }) => {
             ease: [0, 0.71, 0.2, 1.01],
           }}
         >
-          dd
+          <PostList>{posts && posts.map((post) => <PostItem key={post.id} post={post} />)}</PostList>
         </motion.div>
       </Panel>
     </PageLayout>
@@ -34,10 +38,46 @@ const ArchivePage = () => {
 
 export default ArchivePage;
 
+const PageHeader = styled.div`
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: aliceblue;
+  mix-blend-mode: difference;
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    padding-top: 120px;
+  }
+
+  p {
+    font-size: 18px;
+    color: #bbbbbb;
+  }
+`;
+
 const Panel = styled.div`
   background: var(--slate-500);
   min-height: 100vh;
-  padding-top: 160px;
+  div.un-blur {
+    animation: un-blur 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @keyframes un-blur {
+    0% {
+      filter: blur(42px);
+      scale: 1.2;
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0);
+      scale: 1;
+      opacity: 1;
+    }
+  }
 `;
 
 const PostList = styled.ul`
