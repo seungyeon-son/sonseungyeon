@@ -1,12 +1,11 @@
 import Navigation from "@/app/\bcomponents/ui/Header";
+
 import "../app/styles/globals.css";
 import type { AppProps } from "next/app";
-import Panel from "@/app/\bcomponents/layout/Layout";
-import AppLayout from "@/app/\bcomponents/layout/Layout";
-import PageLayout from "@/app/\bcomponents/layout/subLayout";
 import { NextPage } from "next";
-import { Children, ReactElement, ReactNode } from "react";
-import Header from "@/app/\bcomponents/ui/Header";
+import { ReactElement, ReactNode } from "react";
+
+import AppLayout from "@/app/\bcomponents/layout/Layout";
 
 // export default function App({ Component, pageProps }: AppProps) {
 //   return (

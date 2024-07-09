@@ -1,9 +1,12 @@
+import styled from "@emotion/styled";
+import Image from "next/image";
+
+import { IconAuto } from "../../../public/icons";
+
 import AppLayout from "@/app/\bcomponents/layout/Layout";
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
 import Button from "@/app/\bcomponents/ui/Button";
-import styled from "@emotion/styled";
-import Image from "next/image";
-import { IconAuto } from "../../../public/icons";
+
 
 const MainPage = () => {
   return (
@@ -41,7 +44,7 @@ const MainPage = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <img
+              <Image
                 src="https://generated.vusercontent.net/placeholder.svg"
                 width="550"
                 height="550"
