@@ -50,6 +50,37 @@ body {
   --color-gray-e: #eeeeee;
   --color-gray-f: #f6f6f6;
 
+  --input-shadow: 1px 1px 0 1px var(--rgba-black-25);
+  --button-shadow: 3px 4px 0 1px var(--rgba-black-25);
+  --button-shadow-active: 1px 1px 0 1px var(--rgba-black-25);
+  --button-text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px;
+  --button-svg-shadow: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
+  --supports-clamp: 1px, 2px, 3px;
+  --font-size-code: 0.875rem;
+  --font-size-inline-code: 85%;
+  --line-height-inline-code: 1.5;
+  --font-family-default: "SF Pro Text", system-ui, "Helvetica Neue", helvetica, arial, sans-serif;
+  --font-family-default-heading: "SF Pro Display", system-ui, "Helvetica Neue", helvetica, arial, sans-serif;
+  --font-family-code: monospace, menlo, consolas, monaco, "Andale Mono", "Ubuntu Mono";
+  --font-family-heading: var(--font-family-default-heading);
+  --font-weight-heading: 400;
+  --font-weight-default: 400;
+  --font-weight-button: bold;
+  --arc-palette-hover: #d3d4fdff;
+  --arc-palette-foregroundTertiary: #ecedfeff;
+  --arc-palette-minContrastColor: #ecedfeff;
+  --arc-palette-backgroundExtra: #fdfdffff;
+  --arc-background-gradient-color0: #c8cafeff;
+  --arc-background-gradient-color1: #ffe6e6ff;
+  --arc-palette-background: #e9eafeff;
+  --arc-palette-focus: #9094fbff;
+  --arc-palette-maxContrastColor: #212afbff;
+  --arc-palette-cutoutColor: #ecedfeff;
+  --arc-palette-foregroundPrimary: #3139fbff;
+  --arc-palette-title: #0a0d4bff;
+  --arc-palette-subtitle: #a6aafbff;
+  --arc-palette-foregroundSecondary: #8489fbff;
+
   --color-bg: #f6f6f6;
   --color-blue: #0071f0; /* Minimum WCAG AA Pass */
   --color-blue-dark: #0053b3;
