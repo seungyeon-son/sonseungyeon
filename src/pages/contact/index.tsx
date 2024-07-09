@@ -1,6 +1,7 @@
+import styled from "@emotion/styled";
+
 import AppLayout from "@/app/\bcomponents/layout/Layout";
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
-import styled from "@emotion/styled";
 
 const ContactPage = () => {
   return (
@@ -16,13 +17,19 @@ const ContactPage = () => {
 export default ContactPage;
 
 const PageHeader = styled.div`
-  padding: 208px 0 128px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: aliceblue;
+  mix-blend-mode: difference;
   h1 {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 6px;
+    padding-top: 120px;
   }
 
   p {
