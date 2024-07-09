@@ -11,10 +11,10 @@ type ButtonProps = {
   disabled: boolean;
 };
 
-const Button = ({ children, onClick, ...styleProps }: ButtonProps) => {
+const Button = ({ children, onClick, size, ...styleProps }: ButtonProps) => {
   {
     return (
-      <ButtonStyle {...styleProps} onClick={onClick}>
+      <ButtonStyle {...styleProps} onClick={onClick} size={size}>
         <div>{children}</div>
       </ButtonStyle>
     );
@@ -23,20 +23,22 @@ const Button = ({ children, onClick, ...styleProps }: ButtonProps) => {
 
 export default Button;
 
-const ButtonStyle = styled.button<ButtonProps>``;
-
-// import theme from "@components/lib/styles/theme";
-
-export const buttonSize = {
-  small: css`
+export const size = {
+  sm: css`
     width: 50px;
     height: 30px;
   `,
-  medium: css`
+  md: css`
     width: 150px;
     height: 30px;
   `,
+  lg: css`
+    width: 230px;
+    height: 30px;
+  `,
 };
+
+const ButtonStyle = styled.button<ButtonProps>``;
 
 export const backButtonColorOfState = {
   normal: css`
