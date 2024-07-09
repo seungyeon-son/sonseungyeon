@@ -4,6 +4,7 @@ import { archivePosts, PostsProps } from "./data";
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
 import Image from "next/image";
 import Button from "@/app/\bcomponents/ui/Button";
+import { on } from "events";
 
 const PostPage = () => {
   const router = useRouter();
@@ -28,23 +29,23 @@ const PostPage = () => {
 
   return (
     <PageLayout key={post.id}>
+      <PostHeader className=" pt-52 pb-32">
+        <h1>{post.title}</h1>
+        <p>{post.description}</p>
+      </PostHeader>
       <ThumbnailBg image={post.thumbnail} />
       <Panel className="container mx-auto">
-        <PostHeader className="mb-28">
-          <h2>{post.title}</h2>
-          <p>{post.description}</p>
-        </PostHeader>
         <PostLayout className="mb-20">
           <Image
             src="https://generated.vusercontent.net/placeholder.svg"
             width={100}
             height={100}
             alt=""
-            className="w-full h-full object-cover brightness-50"
+            className="w-3/4 h-full object-cover mx-auto"
           />
         </PostLayout>
-        <Button size={"sm"} variant={"primary"} value={""}>
-          QJXSFKAJFL
+        <Button size={"sm"} variant={"primary"} value={""} disabled={false} onClick={() => (location.href = "/")}>
+          Home
         </Button>
         <a href="https://www.supernova.io/forge" target="_blank" rel="noopener noreferrer">
           reference 1
@@ -52,6 +53,9 @@ const PostPage = () => {
         <a href="https://designcode.io/tutorials" target="_blank" rel="noopener noreferrer">
           reference 2
         </a>
+        <Button size={"sm"} variant={"primary"} onClick={() => (location.href = "/")} value={""} disabled={false}>
+          Archive
+        </Button>
       </Panel>
     </PageLayout>
   );
@@ -80,21 +84,23 @@ const ThumbnailBg = styled.div<{ image: string }>`
   background: url(${(props) => props.image}) no-repeat;
   background-size: cover;
   background-position: top;
-  filter: blur(20px) grayscale(80%) brightness(40%);
+  filter: blur(8px) grayscale(0%) brightness(100%);
   margin-bottom: 68px;
 `;
 
 const PostHeader = styled.div`
   text-align: center;
   color: aliceblue;
-  h2 {
+  max-width: 60%;
+  margin: 0 auto;
+  h1 {
     font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 8px;
+    font-weight: 700;
+    margin-bottom: 6px;
   }
 
   p {
     font-size: 18px;
-    color: #c6c6c6;
+    color: #bbbbbb;
   }
 `;
