@@ -1,20 +1,6 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
-import AppLayout from "@/app/\bcomponents/layout/Layout";
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
-
-const ContactPage = () => {
-  return (
-    <PageLayout>
-      <Panel>
-        <PageHeader>
-          <h1>C. Page</h1>
-        </PageHeader>
-      </Panel>
-    </PageLayout>
-  );
-};
-export default ContactPage;
 
 const PageHeader = styled.div`
   height: 400px;
@@ -43,3 +29,16 @@ const Panel = styled.div`
   flex-direction: column;
   min-height: 150svh;
 `;
+
+const ContactPage = () => {
+  return (
+    <PageLayout>
+      <Panel>
+        <PageHeader>
+          <h1>C. Page</h1>
+        </PageHeader>
+      </Panel>
+    </PageLayout>
+  );
+};
+export default ContactPage;

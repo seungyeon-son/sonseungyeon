@@ -15,22 +15,7 @@ interface PostItemProps {
   post: Post;
 }
 
-export const PostItem: FC<PostItemProps> = ({ post }) => {
-  return (
-    <PostItems>
-      <Link href={`/archive/${encodeURIComponent(post.slug)}`}>
-        <Thumbnail image={post.thumbnail} />
-        <div className="tag">{post.tag}</div>
-        <h2>{post.title}</h2>
-        <p>{post.description}</p>
-      </Link>
-    </PostItems>
-  );
-};
-
-export default PostItem;
-
-const PostItems = styled.li`
+export const PostItems = styled.li`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -68,3 +53,18 @@ const Thumbnail = styled.div<{ image: string }>`
   background-size: cover;
   background-position: center;
 `;
+
+export const PostItem: FC<PostItemProps> = ({ post }) => {
+  return (
+    <PostItems>
+      <Link href={`/archive/${encodeURIComponent(post.slug)}`}>
+        <Thumbnail image={post.thumbnail} />
+        <div className="tag">{post.tag}</div>
+        <h2>{post.title}</h2>
+        <p>{post.description}</p>
+      </Link>
+    </PostItems>
+  );
+};
+
+export default PostItem;

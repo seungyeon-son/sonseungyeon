@@ -1,5 +1,3 @@
-import Navigation from "@/app/\bcomponents/ui/Header";
-
 import "../app/styles/globals.css";
 import type { AppProps } from "next/app";
 import { NextPage } from "next";

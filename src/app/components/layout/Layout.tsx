@@ -1,15 +1,4 @@
-import styled from "styled-components";
-
-import Header from "../ui/Header";
-
-const AppLayout = (props: { children: React.ReactNode }) => {
-  return (
-    <Panel>
-      <Header />
-      <div>{props.children}</div>
-    </Panel>
-  );
-};
+import styled from "@emotion/styled";
 
 const Panel = styled.div`
   display: flex;
@@ -19,5 +8,13 @@ const Panel = styled.div`
     width: 100%;
   }
 `;
+
+const AppLayout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <Panel>
+      <div>{children}</div>
+    </Panel>
+  );
+};
 
 export default AppLayout;

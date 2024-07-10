@@ -1,12 +1,11 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
 
-import { IconAuto } from "../../../public/icons";
-
-import AppLayout from "@/app/\bcomponents/layout/Layout";
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
 import Button from "@/app/\bcomponents/ui/Button";
 
+export const MainSection = styled.div``;
+export const WorkSection = styled.div``;
 
 const MainPage = () => {
   return (
@@ -23,22 +22,10 @@ const MainPage = () => {
                 Open Source.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
-                <Button
-                  size={"sm"}
-                  variant={"primary"}
-                  onClick={() => (location.href = "/")}
-                  value={""}
-                  disabled={false}
-                >
+                <Button size="sm" variant="primary" value="" disabled={false}>
                   Get Started
                 </Button>
-                <Button
-                  size={"sm"}
-                  variant={"primary"}
-                  onClick={() => (location.href = "/")}
-                  value={""}
-                  disabled={false}
-                >
+                <Button size="sm" variant="primary" value="" disabled={false}>
                   Learn More
                 </Button>
               </div>
@@ -170,15 +157,19 @@ const MainPage = () => {
               </h3>
               <p className="text-slate-400">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
                 scrambled it to make a type specimen book.
               </p>
               <div className="flex items-center space-x-4">
-                <button className="text-white/80 border">View Project</button>
-                <button className="text-white bg-white/20">Learn More</button>
+                <Button size="sm" variant="primary" value="" disabled={false}>
+                  View Project
+                </Button>
+                <Button size="sm" variant="primary" value="" disabled={false}>
+                  Learn More
+                </Button>
               </div>
             </div>
-            <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-lg"></div>
+            <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-lg" />
           </div>
         </div>
       </section>
@@ -188,19 +179,23 @@ const MainPage = () => {
             <div className="space-y-8">
               <h3 className="text-3xl md:text-4xl font-bold text-slate-50">
                 Lorem Ipsum
-                {/*Project 2: Product UI Develop*/}
+                {/* Project 2: Product UI Develop */}
               </h3>
               <p className="text-slate-400">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
                 scrambled it to make a type specimen book.
               </p>
               <div className="flex items-center space-x-4">
-                <button className="text-[#eee] border">View Project</button>
-                <button className="text-white bg-white/20">Learn More</button>
+                <Button size="sm" variant="primary" value="" disabled={false}>
+                  View Project
+                </Button>
+                <Button size="sm" variant="primary" value="" disabled={false}>
+                  Learn More
+                </Button>
               </div>
             </div>
-            <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-lg"></div>
+            <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-lg" />
           </div>
         </div>
       </section>
@@ -210,7 +205,7 @@ const MainPage = () => {
             <div className="space-y-8">
               <h3 className="text-3xl md:text-4xl font-bold text-slate-50">
                 Lorem Ipsum
-                {/*Project 3: Design Style System*/}
+                {/* Project 3: Design Style System */}
               </h3>
               <p className="text-slate-400">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -218,19 +213,15 @@ const MainPage = () => {
                 and scrambled it to make a type specimen book.
               </p>
               <div className="flex items-center space-x-4">
-                <button className="text-[#eee] border">View Project</button>
-                <Button
-                  size={"sm"}
-                  variant={"primary"}
-                  onClick={() => (location.href = "/")}
-                  value={""}
-                  disabled={false}
-                >
+                <Button size="sm" variant="primary" value="" disabled={false}>
+                  View Project
+                </Button>
+                <Button size="sm" variant="primary" value="" disabled={false}>
                   Learn More
                 </Button>
               </div>
             </div>
-            <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-lg"></div>
+            <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-lg" />
           </div>
         </div>
       </section>
@@ -249,6 +240,3 @@ const MainPage = () => {
   );
 };
 export default MainPage;
-
-export const MainSection = styled.div``;
-export const WorkSection = styled.div``;

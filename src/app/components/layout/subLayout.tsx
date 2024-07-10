@@ -1,14 +1,4 @@
-import styled from "styled-components";
-
-import Header from "../ui/Header";
-
-const PageLayout = (props: { children: React.ReactNode }) => {
-  return (
-    <Centering>
-      <FixedWidth>{props.children}</FixedWidth>
-    </Centering>
-  );
-};
+import styled from "@emotion/styled";
 
 const Centering = styled.div`
   display: flex;
@@ -17,6 +7,7 @@ const Centering = styled.div`
   height: 100%;
   background: linear-gradient(#0f172a 70%, #2a3858 100%);
 `;
+
 const FixedWidth = styled.div`
   width: 1280px;
   height: 100%;
@@ -26,4 +17,12 @@ const FixedWidth = styled.div`
     width: 100%;
   }
 `;
+
+const PageLayout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <Centering>
+      <FixedWidth>{children}</FixedWidth>
+    </Centering>
+  );
+};
 export default PageLayout;

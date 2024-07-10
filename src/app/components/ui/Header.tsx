@@ -1,41 +1,10 @@
 "use client";
+
 import Link from "next/link";
 import styled from "styled-components";
 import { usePathname } from "next/navigation";
 
-export default function Navigation() {
-  const pathname = usePathname();
-
-  return (
-    <HeaderArea>
-      <div className="container">
-        <Link
-          href="/"
-          className="text-white"
-          // className={`text-slate-50 font-bold text-lg ${pathname === Link.href ? "bg-sky-100 text-blue-500" : ""}`}
-          prefetch={false}
-        >
-          Logo
-        </Link>
-        <nav className="hidden md:flex items-center space-x-10">
-          <Link href="/about" className="text-slate-300 hover:text-slate-50 transition-colors" prefetch={false}>
-            About
-          </Link>
-          <Link href="/archive" className="text-slate-300 hover:text-slate-50 transition-colors" prefetch={false}>
-            Work
-          </Link>
-          <Link href="/contact" className="text-slate-300 hover:text-slate-50 transition-colors" prefetch={false}>
-            Contact
-          </Link>
-        </nav>
-        <button className="md:hidden text-slate-400 hover:text-slate-50 transition-colors">
-          {/* <MenuIcon className="h-6 w-6" /> */}
-          menu
-        </button>
-      </div>
-    </HeaderArea>
-  );
-}
+import Button from "./Button";
 
 const HeaderArea = styled.header`
   position: absolute;
@@ -67,15 +36,44 @@ const HeaderArea = styled.header`
   @media (max-width: 1080px) {
     top: 16px;
     width: calc(100% - 32px);
-    div {
+    div.container {
       padding: 0 24px;
     }
   }
+
   @media (max-width: 640px) {
     top: 16px;
     width: calc(100% - 32px);
-    div {
+    div.container {
       padding: 0 24px;
     }
   }
 `;
+
+export default function Navigation() {
+  const pathname = usePathname();
+
+  return (
+    <HeaderArea>
+      <div className="container">
+        <Link href="/" className="text-white" prefetch={false} aria-label="Home">
+          Logo
+        </Link>
+        <nav className="hidden md:flex items-center space-x-10">
+          <Link href="/about" className="text-slate-300 hover:text-slate-50 transition-colors" prefetch={false}>
+            About
+          </Link>
+          <Link href="/archive" className="text-slate-300 hover:text-slate-50 transition-colors" prefetch={false}>
+            Work
+          </Link>
+          <Link href="/contact" className="text-slate-300 hover:text-slate-50 transition-colors" prefetch={false}>
+            Contact
+          </Link>
+        </nav>
+        <Button aria-label="Menu" size="sm" variant="primary" value="" disabled={false}>
+          menu
+        </Button>
+      </div>
+    </HeaderArea>
+  );
+}

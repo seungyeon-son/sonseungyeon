@@ -2,41 +2,10 @@ import styled from "@emotion/styled";
 import { FC } from "react";
 import { motion } from "framer-motion";
 
-import PostItem from "./post";
-
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
+import ArchivePosts from "./post";
 
 import { archivePosts, PostsProps } from "./data";
-
-const Posts: FC<PostsProps> = ({ posts }) => {
-  return (
-    <PageLayout>
-      <Panel className="container mx-auto">
-        <PageHeader>
-          <h1>W. Page</h1>
-        </PageHeader>
-        <motion.div
-          className="box un-blur"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.5,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-        >
-          <PostList>{posts && posts.map((post) => <PostItem key={post.id} post={post} />)}</PostList>
-        </motion.div>
-      </Panel>
-    </PageLayout>
-  );
-};
-
-const ArchivePage = () => {
-  return <Posts posts={archivePosts} />;
-};
-
-export default ArchivePage;
 
 const PageHeader = styled.div`
   height: 400px;
@@ -88,3 +57,33 @@ const PostList = styled.ul`
   padding: 0;
   margin: 0;
 `;
+
+const Posts: FC<PostsProps> = ({ posts }) => {
+  return (
+    <PageLayout>
+      <Panel className="container mx-auto">
+        <PageHeader>
+          <h1>W. Page</h1>
+        </PageHeader>
+        <motion.div
+          className="box un-blur"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
+          <PostList>{posts && posts.map((post) => <ArchivePosts key={post.id} post={post} />)}</PostList>
+        </motion.div>
+      </Panel>
+    </PageLayout>
+  );
+};
+
+const ArchivePage = () => {
+  return <Posts posts={archivePosts} />;
+};
+
+export default ArchivePage;

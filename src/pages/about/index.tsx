@@ -2,19 +2,6 @@ import styled from "styled-components";
 
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
 
-const AboutPage = () => {
-  return (
-    <PageLayout>
-      <Panel>
-        <PageHeader>
-          <h1>A. Page</h1>
-        </PageHeader>
-      </Panel>
-    </PageLayout>
-  );
-};
-export default AboutPage;
-
 const PageHeader = styled.div`
   height: 400px;
   display: flex;
@@ -42,3 +29,16 @@ const Panel = styled.div`
   flex-direction: column;
   min-height: 150svh;
 `;
+
+const AboutPage = () => {
+  return (
+    <PageLayout>
+      <Panel>
+        <PageHeader>
+          <h1>A. Page</h1>
+        </PageHeader>
+      </Panel>
+    </PageLayout>
+  );
+};
+export default AboutPage;
