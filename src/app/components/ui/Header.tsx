@@ -23,7 +23,7 @@ const HeaderArea = styled.header`
     height: 64px;
     border-radius: 12px;
     background: linear-gradient(90deg, rgba(51, 65, 85, 0.5) 0%, rgba(148, 151, 189, 0.25) 100%);
-    box-shadow: 0px 0px 1px 1px rgb(108 123 134 / 20%);
+    box-shadow: 0px 4px 10px 1px rgb(49 55 56 / 50%);
     backdrop-filter: blur(20px);
     margin: 0 auto;
     padding: 0 48px;

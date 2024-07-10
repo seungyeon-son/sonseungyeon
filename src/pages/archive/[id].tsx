@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 import Image from "next/image";
@@ -5,7 +6,7 @@ import Link from "next/link";
 
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
 import Button from "@/app/\bcomponents/ui/Button";
-import { archivePosts } from "./lib/data";
+import { archivePosts } from "../../app/lib/data";
 
 const PostLayout = styled.div`
   width: 100%;
@@ -59,7 +60,7 @@ const PostHeader = styled.div`
   }
 `;
 
-const PostPage = () => {
+const PostDetail: FC = () => {
   const router = useRouter();
   const { id } = router.query;
 
@@ -67,8 +68,7 @@ const PostPage = () => {
     return <div>Loading...</div>;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-shadow
-  const post = archivePosts.find((post) => post.id === Number(id));
+  const post = archivePosts.find((p) => p.id === Number(id));
 
   if (!post) {
     return (
@@ -84,7 +84,6 @@ const PostPage = () => {
   return (
     <PageLayout key={post.id}>
       <ThumbnailBg image={post.thumbnail}>
-        {" "}
         <PostHeader className="">
           <h1>{post.title}</h1>
           <p>{post.description}</p>
@@ -117,4 +116,4 @@ const PostPage = () => {
   );
 };
 
-export default PostPage;
+export default PostDetail;

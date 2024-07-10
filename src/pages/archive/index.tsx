@@ -3,8 +3,8 @@ import { FC } from "react";
 import { motion } from "framer-motion";
 
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
-import ArchivePosts from "./post";
-import { archivePosts, PostsProps } from "./lib/data";
+import { archivePosts } from "../../app/lib/data";
+import PostItemComponent from "./post";
 
 const PageHeader = styled.div`
   height: 400px;
@@ -57,7 +57,7 @@ const PostList = styled.ul`
   margin: 0;
 `;
 
-const Posts: FC<PostsProps> = ({ posts }) => {
+const ArchiveIndex: FC = () => {
   return (
     <PageLayout>
       <Panel className="container mx-auto">
@@ -74,15 +74,19 @@ const Posts: FC<PostsProps> = ({ posts }) => {
             ease: [0, 0.71, 0.2, 1.01],
           }}
         >
-          <PostList>{posts && posts.map((post) => <ArchivePosts key={post.id} post={post} />)}</PostList>
+          <PostList>
+            {archivePosts.map((post) => (
+              <PostItemComponent key={post.id} post={post} />
+            ))}
+          </PostList>
         </motion.div>
       </Panel>
     </PageLayout>
   );
 };
 
-const ArchivePage = () => {
-  return <Posts posts={archivePosts} />;
-};
+// const ArchivePage = () => {
+//   return <Posts posts={archivePosts} />;
+// };
 
-export default ArchivePage;
+export default ArchiveIndex;

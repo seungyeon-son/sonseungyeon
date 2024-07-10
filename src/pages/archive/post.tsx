@@ -54,7 +54,7 @@ const Thumbnail = styled.div<{ image: string }>`
   background-position: center;
 `;
 
-export const PostItem: FC<PostItemProps> = ({ post }) => {
+const PostItemComponent: FC<PostItemProps> = ({ post }) => {
   return (
     <PostItems>
       <Link href={`/archive/${encodeURIComponent(post.slug)}`}>
@@ -67,4 +67,4 @@ export const PostItem: FC<PostItemProps> = ({ post }) => {
   );
 };
 
-export default PostItem;
+export default PostItemComponent;
