@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import styled from "styled-components";
-import { usePathname } from "next/navigation";
 
 import Button from "./Button";
 
@@ -50,9 +49,7 @@ const HeaderArea = styled.header`
   }
 `;
 
-export default function Navigation() {
-  const pathname = usePathname();
-
+export const Navigation = () => {
   return (
     <HeaderArea>
       <div className="container">
@@ -76,4 +73,4 @@ export default function Navigation() {
       </div>
     </HeaderArea>
   );
-}
+};

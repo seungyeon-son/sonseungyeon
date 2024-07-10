@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 
+import { Navigation } from "../ui/Header";
+
 const Panel = styled.div`
   display: flex;
   justify-content: center;
@@ -12,7 +14,10 @@ const Panel = styled.div`
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Panel>
-      <div>{children}</div>
+      <div>
+        <Navigation />
+        {children}
+      </div>
     </Panel>
   );
 };

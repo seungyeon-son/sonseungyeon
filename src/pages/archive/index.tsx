@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
 import ArchivePosts from "./post";
-
-import { archivePosts, PostsProps } from "./data";
+import { archivePosts, PostsProps } from "./lib/data";
 
 const PageHeader = styled.div`
   height: 400px;
