@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
 import Button from "@/app/\bcomponents/ui/Button";
-import { archivePosts } from "../../app/lib/data";
+import { archivePosts } from "@/app/lib/data";
 
 const PostLayout = styled.div`
   width: 100%;

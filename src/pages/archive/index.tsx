@@ -2,9 +2,9 @@ import styled from "@emotion/styled";
 import { FC } from "react";
 import { motion } from "framer-motion";
 
+import { archivePosts } from "@/app/lib/data";
+import PostItemComponent from "@/app/\bcomponents/postItem";
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
-import { archivePosts } from "../../app/lib/data";
-import PostItemComponent from "../../app/components/postItem";
 
 const PageHeader = styled.div`
   height: 400px;
