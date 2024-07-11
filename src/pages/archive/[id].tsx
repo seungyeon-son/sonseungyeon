@@ -67,7 +67,6 @@ const PostDetail: FC = () => {
   if (!id) {
     return <div>Loading...</div>;
   }
-
   const post = archivePosts.find((p) => p.id === Number(id));
 
   if (!post) {

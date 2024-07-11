@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import PageLayout from "@/app/\bcomponents/layout/subLayout";
 import { archivePosts } from "../../app/lib/data";
-import PostItemComponent from "./post";
+import PostItemComponent from "../../app/components/postItem";
 
 const PageHeader = styled.div`
   height: 400px;
@@ -84,9 +84,5 @@ const ArchiveIndex: FC = () => {
     </PageLayout>
   );
 };
-
-// const ArchivePage = () => {
-//   return <Posts posts={archivePosts} />;
-// };
 
 export default ArchiveIndex;
