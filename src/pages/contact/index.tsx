@@ -1,6 +1,5 @@
+import PageLayout from "@/src/app/\bcomponents/layout/subLayout";
 import styled from "styled-components";
-
-import PageLayout from "@/app/\bcomponents/layout/subLayout";
 
 const PageHeader = styled.div`
   height: 400px;

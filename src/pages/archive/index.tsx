@@ -1,10 +1,9 @@
 import styled from "@emotion/styled";
 import { FC } from "react";
 import { motion } from "framer-motion";
-
-import { archivePosts } from "@/app/lib/data";
-import PostItemComponent from "@/app/\bcomponents/postItem";
-import PageLayout from "@/app/\bcomponents/layout/subLayout";
+import PageLayout from "@/src/app/\bcomponents/layout/subLayout";
+import { archivePosts } from "@/src/app/lib/data";
+import PostItemComponent from "@/src/app/\bcomponents/postItem";
 
 const PageHeader = styled.div`
   height: 400px;

@@ -3,10 +3,9 @@ import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 import Image from "next/image";
 import Link from "next/link";
-
-import PageLayout from "@/app/\bcomponents/layout/subLayout";
-import Button from "@/app/\bcomponents/ui/Button";
-import { archivePosts } from "@/app/lib/data";
+import { archivePosts } from "@/src/app/lib/data";
+import PageLayout from "@/src/app/\bcomponents/layout/subLayout";
+import Button from "@/src/app/\bcomponents/ui/Button";
 
 const PostLayout = styled.div`
   width: 100%;

@@ -1,8 +1,7 @@
+import PageLayout from "@/src/app/\bcomponents/layout/subLayout";
+import Button from "@/src/app/\bcomponents/ui/Button";
 import styled from "@emotion/styled";
 import Image from "next/image";
-
-import PageLayout from "@/app/\bcomponents/layout/subLayout";
-import Button from "@/app/\bcomponents/ui/Button";
 
 export const MainSection = styled.div``;
 export const WorkSection = styled.div``;
