@@ -40,4 +40,5 @@ const ContactPage = () => {
     </PageLayout>
   );
 };
+
 export default ContactPage;
