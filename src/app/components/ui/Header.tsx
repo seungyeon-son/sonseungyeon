@@ -3,7 +3,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-import Button from "./Button";
+import Button from "./button";
 
 const HeaderArea = styled.header`
   position: absolute;

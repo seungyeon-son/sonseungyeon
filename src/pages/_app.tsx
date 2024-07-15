@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import { NextPage } from "next";
 import { ReactElement, ReactNode } from "react";
 
-import AppLayout from "../app/\bcomponents/layout/Layout";
+import AppLayout from "../app/components/layout/layout";
 
 // export default function App({ Component, pageProps }: AppProps) {
 //   return (
