@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { archivePosts } from "@/src/app/lib/data";
 import PageLayout from "@/src/app/\bcomponents/layout/subLayout";
-import Button from "@/src/app/components/ui/button";
+import Button from "@/src/app/components/ui/Button";
 
 const PostLayout = styled.div`
   width: 100%;

@@ -1,5 +1,5 @@
 import PageLayout from "@/src/app/\bcomponents/layout/subLayout";
-import Button from "@/src/app/components/ui/button";
+import Button from "@/src/app/\bcomponents/ui/Button";
 import styled from "@emotion/styled";
 import Image from "next/image";
 

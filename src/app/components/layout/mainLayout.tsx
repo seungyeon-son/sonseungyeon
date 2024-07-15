@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-import { Navigation } from "../ui/header";
+import { Navigation } from "../ui/Header";
 
 const Panel = styled.div`
   display: flex;
