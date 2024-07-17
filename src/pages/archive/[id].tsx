@@ -25,6 +25,8 @@ const ThumbnailBg = styled.div<{ image: string }>`
   width: 100%;
   height: 400px;
   background: url(${(props) => props.image}) no-repeat;
+  /* border-image: fill 0 linear-gradient(#0003, #0009); */
+  border-image: conic-gradient(from 45deg at calc(100% - 1lh), #000 25%, #cece 0) fill 0/0 0 0 100vw;
   background-attachment: fixed;
   background-size: cover;
   background-position: top;
