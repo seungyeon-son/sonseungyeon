@@ -15,32 +15,35 @@ interface PostItemProps {
   post: Post;
 }
 
-export const PostItems = styled.li`
+const PostItems = styled.li`
   width: 100%;
   display: flex;
   flex-direction: column;
-  div.tag {
-    font-size: 14px;
-    color: #c0c0c0;
-    background: #54525c;
-    width: fit-content;
-    border-radius: 6px;
-    padding: 0 6px;
-    margin: 0 6px 12px;
-  }
-  h2 {
-    font-weight: 600;
-    font-size: 16px;
-    color: #fefefe;
-    padding: 0 8px;
-    margin-bottom: 4px;
-  }
-  p {
-    font-size: 14px;
-    line-height: 1.35rem;
-    color: #c0c0c0;
-    padding: 0 8px;
-  }
+`;
+
+const PostTag = styled.div`
+  font-size: 14px;
+  color: #c0c0c0;
+  background: #54525c;
+  width: fit-content !important;
+  border-radius: 6px;
+  padding: 0 6px;
+  margin: 0 6px 12px;
+`;
+
+const PostTitle = styled.h2`
+  font-weight: 600;
+  font-size: 16px;
+  color: #fefefe;
+  padding: 0 8px;
+  margin-bottom: 4px;
+`;
+
+const PostDescribe = styled.p`
+  font-size: 14px;
+  line-height: 1.35rem;
+  color: #c0c0c0;
+  padding: 0 8px;
 `;
 
 const Thumbnail = styled.div<{ image: string }>`
@@ -59,9 +62,9 @@ const PostItemComponent: FC<PostItemProps> = ({ post }) => {
     <PostItems>
       <Link href={`/archive/${encodeURIComponent(post.slug)}`}>
         <Thumbnail image={post.thumbnail} />
-        <div className="tag">{post.tag}</div>
-        <h2>{post.title}</h2>
-        <p>{post.description}</p>
+        <PostTag>{post.tag}</PostTag>
+        <PostTitle>{post.title}</PostTitle>
+        <PostDescribe>{post.description}</PostDescribe>
       </Link>
     </PostItems>
   );
