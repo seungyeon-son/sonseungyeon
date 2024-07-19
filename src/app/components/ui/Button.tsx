@@ -31,6 +31,8 @@ const ButtonStyle = styled.button<ButtonProps>`
   border-radius: 6px;
   font-size: 14px;
   line-height: 1em;
+  min-width: 80px;
+  height: 52px;
   ${({ size }) => sizeStyles[size]}
 
   &:hover {
@@ -42,8 +44,8 @@ const ButtonStyle = styled.button<ButtonProps>`
   ${({ variant }) =>
     variant === "primary" &&
     css`
-      background-color: #fff;
-      color: #45434d;
+      background-color: #29395d;
+      color: #ccc8db;
     `}
   ${({ variant }) =>
     variant === "secondary" &&
@@ -55,7 +57,7 @@ const ButtonStyle = styled.button<ButtonProps>`
     variant === "ghost" &&
     css`
       background-color: transparent;
-      color: black;
+      color: white;
       border: 1px solid black;
     `}
   ${({ variant }) =>
