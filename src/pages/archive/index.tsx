@@ -10,19 +10,22 @@ const PageHeader = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
   color: aliceblue;
   mix-blend-mode: difference;
+  padding-top: 120px;
+  max-width: 320px;
   h1 {
     font-size: 28px;
     font-weight: 700;
-    margin-bottom: 6px;
-    padding-top: 120px;
+    margin-bottom: 8px;
   }
-
-  p {
-    font-size: 18px;
+  p:first-of-type {
+    font-size: 13px;
+    color: #9c9c9c;
+  }
+  p:last-of-type {
+    font-size: 14px;
     color: #bbbbbb;
   }
 `;
@@ -50,7 +53,7 @@ const Panel = styled.div`
 const PostList = styled.ul`
   display: flex;
   justify-content: center;
-  gap: 36px;
+  gap: 48px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -61,7 +64,9 @@ const ArchiveIndex: FC = () => {
     <PageLayout>
       <Panel className="container mx-auto">
         <PageHeader>
-          <h1>W. Page</h1>
+          <p>2021-2024</p>
+          <h1>Archiving my Works.</h1>
+          <p>This is the description of the second post.This is the description of the second post</p>
         </PageHeader>
         <motion.div
           className="box un-blur"
