@@ -7,10 +7,22 @@ import { archivePosts } from "@/src/app/lib/data";
 import PageLayout from "@/src/app/\bcomponents/layout/subLayout";
 import Button from "@/src/app/\bcomponents/ui/Button";
 
+const LayoutRight = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto 0 0;
+`;
+const LayoutLeft = styled.div`
+  display: flex;
+
+  width: fit-content;
+  justify-content: flex-start;
+`;
 const PostLayout = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 48px;
 `;
 
@@ -90,15 +102,48 @@ const PostDetail: FC = () => {
         </PostHeader>
       </ThumbnailBg>
       <Panel className="container mx-auto">
-        <PostLayout className="mb-20">
-          <Image
-            src="https://generated.vusercontent.net/placeholder.svg"
-            width={100}
-            height={100}
-            alt=""
-            className="w-3/4 h-full object-cover mx-auto"
-          />
-        </PostLayout>
+        <div>
+          <PostLayout className="mb-20">
+            <div>
+              <Image
+                src="https://generated.vusercontent.net/placeholder.svg"
+                width={100}
+                height={100}
+                alt=""
+                className="w-full h-full object-cover mx-auto"
+              />
+            </div>
+            <div>
+              {" "}
+              <Image
+                src="https://generated.vusercontent.net/placeholder.svg"
+                width={100}
+                height={100}
+                alt=""
+                className="w-full h-full object-cover mx-auto"
+              />
+            </div>
+          </PostLayout>
+          <LayoutLeft className="mb-20">
+            <Image
+              src="https://generated.vusercontent.net/placeholder.svg"
+              width={100}
+              height={100}
+              alt=""
+              className="w-3/5 h-full object-cover"
+            />
+          </LayoutLeft>
+          <LayoutRight>
+            {" "}
+            <Image
+              src="https://generated.vusercontent.net/placeholder.svg"
+              width={100}
+              height={100}
+              alt=""
+              className="w-3/5 h-full object-cover"
+            />
+          </LayoutRight>
+        </div>
         <Button size="sm" variant="primary" value="" disabled={false}>
           Home
         </Button>
