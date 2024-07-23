@@ -2,12 +2,11 @@ import PageLayout from "@/src/app/\bcomponents/layout/subLayout";
 import styled from "styled-components";
 import Link from "next/link";
 import { Card, CardContent, CardFooter, CardHeader } from "@/src/app/\bcomponents/ui/Card";
-import { Footer } from "@/src/app/\bcomponents/ui/Footer";
 import { JSX, SVGProps } from "react";
 import Image from "next/image";
 
 const PageHeader = styled.div`
-  height: 400px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,19 +14,11 @@ const PageHeader = styled.div`
   color: aliceblue;
   mix-blend-mode: difference;
   padding-top: 120px;
-  max-width: 480px;
+
   h1 {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 8px;
-  }
-  p:first-of-type {
-    font-size: 13px;
-    color: #9c9c9c;
-  }
-  p:last-of-type {
-    font-size: 14px;
-    color: #bbbbbb;
   }
 `;
 
@@ -61,14 +52,17 @@ const AboutPage = () => {
   return (
     <PageLayout>
       <Panel className="">
-        <PageHeader>
-          <p>About</p>
-          <h1>John Doe</h1>
-          <p>Full-Stack Developer</p>
-          <p>
-            Im a passionate full-stack developer with over 8 years of experience in building scalable and user-friendly
-            web applications. My goal is to create innovative solutions that drive business success.
-          </p>
+        <PageHeader className="pt-32 pb-16 md:px-6 bg-slate-500/20 w-full">
+          <div className="md:!w-[1536] mx-auto px-10">
+            <div className="!w-[400px]">
+              <p>About</p>
+              <h1>About</h1>
+              <p className="text-slate-400">
+                Im a passionate full-stack developer with over 8 years of experience in building scalable and
+                user-friendly web applications. My goal is to create innovative solutions that drive business success.
+              </p>
+            </div>
+          </div>
         </PageHeader>
         <main className="text-slate-300">
           <div className="flex flex-col items-center justify-center gap-6 px-4 py-16 md:px-6 bg-slate-500/20">
@@ -88,8 +82,6 @@ const AboutPage = () => {
             <div className="grid gap-10 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 w-px bg-muted-foreground/20" />
-
-                {/* B안 */}
                 <h2 className="text-2xl font-bold">Work Experience</h2>
                 <div className="mt-4 grid gap-6">
                   <div className="grid grid-cols-[auto_1fr] items-start gap-4">
@@ -296,7 +288,6 @@ const AboutPage = () => {
             </div>
           </section>
         </main>
-        <Footer />
       </Panel>
     </PageLayout>
   );

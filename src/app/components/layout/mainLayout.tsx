@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
 import { Navigation } from "../ui/Header";
+import { Footer } from "../ui/Footer";
 
 const Panel = styled.div`
   display: flex;
@@ -17,6 +18,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
       <div>
         <Navigation />
         {children}
+        <Footer />
       </div>
     </Panel>
   );
