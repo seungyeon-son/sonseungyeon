@@ -16,7 +16,7 @@ interface PostItemProps {
 }
 
 const PostItems = styled.li`
-  width: 100%;
+  width: 23%;
   display: flex;
   flex-direction: column;
 `;

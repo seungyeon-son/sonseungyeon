@@ -18,8 +18,8 @@ const HeaderArea = styled.header`
     left: 50%;
     transform: translateX(-50%);
     z-index: 50;
-    width: 100%;
-    max-width: 1536px;
+    width: calc(100% - 72px);
+    max-width: 1464px;
     height: 64px;
     border-radius: 12px;
     background: linear-gradient(90deg, rgba(51, 65, 85, 0.5) 0%, rgba(148, 151, 189, 0.25) 100%);
@@ -63,13 +63,16 @@ export const Navigation = () => {
           <Link href="/archive" className="text-slate-300 hover:text-slate-50 transition-colors" prefetch={false}>
             Work
           </Link>
-          <Link href="/contact" className="text-slate-300 hover:text-slate-50 transition-colors" prefetch={false}>
-            Contact
-          </Link>
+          <Button aria-label="Menu" size="sm" variant="primary" value="" disabled={false}>
+            <Link
+              href="mailto:au1gust8@gmail.com"
+              target="_blank"
+              className="text-slate-300 hover:text-slate-50 transition-colors"
+            >
+              Contact
+            </Link>
+          </Button>
         </nav>
-        <Button aria-label="Menu" size="sm" variant="primary" value="" disabled={false}>
-          menu
-        </Button>
       </div>
     </HeaderArea>
   );
