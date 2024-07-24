@@ -23,7 +23,7 @@ export const CardHeader = styled.div``;
 export const CardContent = styled.div``;
 export const CardFooter = styled.div``;
 
-const Cards = () => {
+const CardWrap = () => {
   return (
     <Card className="border-0 shadow-none">
       <CardHeader className="bg-muted p-4">
@@ -50,4 +50,4 @@ const Cards = () => {
   );
 };
 
-export default Card;
+export default CardWrap;

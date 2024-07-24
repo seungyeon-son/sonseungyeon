@@ -32,7 +32,7 @@ const ButtonStyle = styled.button<ButtonProps>`
   font-size: 14px;
   line-height: 1em;
   min-width: 80px;
-  height: 52px;
+  height: 56px;
   ${({ size }) => sizeStyles[size]}
 
   &:hover {
