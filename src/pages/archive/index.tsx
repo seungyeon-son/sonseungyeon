@@ -34,6 +34,9 @@ const PageHeader = styled.div`
 const Panel = styled.div`
   background: var(--slate-500);
   min-height: 100vh;
+  max-width: 1536px;
+  padding: 0 36px;
+  margin: 0 auto;
   div.un-blur {
     animation: un-blur 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -54,7 +57,8 @@ const Panel = styled.div`
 const PostList = styled.ul`
   display: flex;
   justify-content: center;
-  gap: 48px;
+  flex-wrap: wrap;
+  gap: 38px;
   list-style: none;
   padding: 0;
   margin: 0;

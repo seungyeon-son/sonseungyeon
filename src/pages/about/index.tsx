@@ -35,36 +35,45 @@ const Panel = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 150svh;
+  max-width: 1536px;
+  padding: 0 36px;
+  margin: 0 auto;
 `;
 
 const AboutPage = () => {
   return (
     <PageLayout>
       <Panel>
-        {/* TODO: 보류 */}
-        <PageHeader className="">
-          <div className="container flex justify-between mx-auto">
+        <PageHeader>
+          <div className="flex justify-between">
             <div className="!w-[440px]">
               <p>About</p>
               <h1>About Description.</h1>
               {/* <h1>My Career and its description</h1> */}
               <p className="text-slate-400">My goal is to create innovativex.</p>
             </div>
-            <Button size="sm" variant="primary" value="" disabled={false}>
+            <Button size="sm" variant="white" value="" disabled={false}>
               Download
             </Button>
           </div>
         </PageHeader>
 
         <main className="text-slate-300">
-          <div className="flex flex-col items-center justify-center gap-6 px-4 py-16 md:px-60">
-            <div className="rounded-full !w-32 h-32 overflow-hidden border-2 border-slate-400">
-              <Image src="/placeholder.svg" width={128} height={128} alt="Profile Picture" />
+          <div className="flex flex-col items-center justify-center gap-6 px-4 pb-10 md:px-60">
+            <div className="rounded-2xl w-8/12 h-52 overflow-hidden shadow-sm border-slate-400">
+              <Image
+                src="https://generated.vusercontent.net/placeholder.svg"
+                width={100}
+                height={100}
+                alt="Profile Picture"
+                className="aspect-square object-cover opacity-30 w-full"
+              />
             </div>
+
             <div className="text-center space-y-2 items-center flex flex-col">
-              <h1 className="text-4xl font-bold">John Doe</h1>
-              <p className="text-xl text-primary-foreground">Full-Stack Developer</p>
-              <p className="max-w-[600px] text-muted-foreground">
+              <h1 className="text-3xl font-bold">SY Son</h1>
+              <p className="text-xl text-slate-300/80">UX UI Engineer</p>
+              <p className="max-w-[430px] text-slate-400 text-balance">
                 Im a passionate full-stack developer with over 8 years of experience in building scalable and
                 user-friendly web applications. My goal is to create innovative solutions that drive business success.
               </p>

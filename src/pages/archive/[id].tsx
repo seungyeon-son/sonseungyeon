@@ -31,6 +31,9 @@ const Panel = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 150svh;
+  max-width: 1536px;
+  padding: 0 36px;
+  margin: 0 auto;
 `;
 
 const ThumbnailBg = styled.div<{ image: string }>`
@@ -101,7 +104,7 @@ const PostDetail: FC = () => {
           <p>{post.description}</p>
         </PostHeader>
       </ThumbnailBg>
-      <Panel className="container mx-auto">
+      <Panel>
         <div>
           <PostLayout className="mb-20">
             <div>
@@ -134,7 +137,6 @@ const PostDetail: FC = () => {
             />
           </LayoutLeft>
           <LayoutRight>
-            {" "}
             <Image
               src="https://generated.vusercontent.net/placeholder.svg"
               width={100}
