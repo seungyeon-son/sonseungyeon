@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Card, CardContent, CardFooter, CardHeader } from "@/src/app/\bcomponents/ui/Card";
 import { JSX, SVGProps } from "react";
 import Image from "next/image";
+import Button from "@/src/app/\bcomponents/ui/Button";
 
 const PageHeader = styled.div`
   min-height: 400px;
@@ -14,11 +15,19 @@ const PageHeader = styled.div`
   color: aliceblue;
   mix-blend-mode: difference;
   padding-top: 120px;
-
   h1 {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 8px;
+  }
+  p:first-of-type {
+    font-size: 13px;
+    color: #9c9c9c;
+  }
+  p:last-of-type {
+    font-size: 14px;
+    color: #bbbbbb;
+    min-height: 42px;
   }
 `;
 
@@ -28,44 +37,27 @@ const Panel = styled.div`
   min-height: 150svh;
 `;
 
-const BriefcaseIcon = (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-      <rect width="20" height="14" x="2" y="6" rx="2" />
-    </svg>
-  );
-};
-
 const AboutPage = () => {
   return (
     <PageLayout>
-      <Panel className="">
-        <PageHeader className="pt-32 pb-16 md:px-6 bg-slate-500/20 w-full">
-          <div className="md:!w-[1536] mx-auto px-10">
-            <div className="!w-[400px]">
+      <Panel>
+        {/* TODO: 보류 */}
+        <PageHeader className="">
+          <div className="container flex justify-between mx-auto">
+            <div className="!w-[440px]">
               <p>About</p>
-              <h1>About</h1>
-              <p className="text-slate-400">
-                Im a passionate full-stack developer with over 8 years of experience in building scalable and
-                user-friendly web applications. My goal is to create innovative solutions that drive business success.
-              </p>
+              <h1>About Description.</h1>
+              {/* <h1>My Career and its description</h1> */}
+              <p className="text-slate-400">My goal is to create innovativex.</p>
             </div>
+            <Button size="sm" variant="primary" value="" disabled={false}>
+              Download
+            </Button>
           </div>
         </PageHeader>
+
         <main className="text-slate-300">
-          <div className="flex flex-col items-center justify-center gap-6 px-4 py-16 md:px-6 bg-slate-500/20">
+          <div className="flex flex-col items-center justify-center gap-6 px-4 py-16 md:px-60">
             <div className="rounded-full !w-32 h-32 overflow-hidden border-2 border-slate-400">
               <Image src="/placeholder.svg" width={128} height={128} alt="Profile Picture" />
             </div>

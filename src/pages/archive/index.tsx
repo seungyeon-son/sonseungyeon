@@ -27,6 +27,7 @@ const PageHeader = styled.div`
   p:last-of-type {
     font-size: 14px;
     color: #bbbbbb;
+    min-height: 42px;
   }
 `;
 
