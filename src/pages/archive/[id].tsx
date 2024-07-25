@@ -15,7 +15,6 @@ const LayoutRight = styled.div`
 `;
 const LayoutLeft = styled.div`
   display: flex;
-
   width: fit-content;
   justify-content: flex-start;
 `;

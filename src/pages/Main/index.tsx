@@ -10,7 +10,7 @@ const MainPage = () => {
   return (
     <PageLayout>
       <MainSection className="dark bg-[linear-gradient(#0f172a_70%,#2a3858_100%)] text-white">
-        <section className="container mx-auto pt-[240px] px-4 sm:px-6 lg:px-8">
+        <section className="container mx-auto pt-[240px] px-9">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             <div className="space-y-4">
               <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
@@ -40,7 +40,7 @@ const MainPage = () => {
             </div>
           </div>
         </section>
-        <section className="container mx-auto pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="container mx-auto pb-16 px-9">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="space-y-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
@@ -67,7 +67,7 @@ const MainPage = () => {
         </section>
       </MainSection>
       <WorkSection className="py-24 bg-slate-800">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-9">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-50">Featured Work</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="group relative overflow-hidden rounded-lg">
@@ -147,7 +147,7 @@ const MainPage = () => {
       </WorkSection>
 
       <section className="py-24 bg-slate-950">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-9">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <h3 className="text-3xl md:text-4xl font-bold text-slate-50">
@@ -173,7 +173,7 @@ const MainPage = () => {
         </div>
       </section>
       <section className="py-24 bg-slate-950">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-9">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:flex-row-reverse">
             <div className="space-y-8">
               <h3 className="text-3xl md:text-4xl font-bold text-slate-50">
@@ -199,7 +199,7 @@ const MainPage = () => {
         </div>
       </section>
       <section className="py-24 bg-slate-950">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-9">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <h3 className="text-3xl md:text-4xl font-bold text-slate-50">
@@ -230,11 +230,6 @@ const MainPage = () => {
           <p className="text-xl md:text-2xl">Explore my latest projects.</p>
         </div>
       </section>
-      <footer className="bg-slate-800 py-12">
-        <div className="container mx-auto px-4 md:px-6 text-center text-slate-300">
-          <p>&copy; 2024 Demo. All rights reserved.</p>
-        </div>
-      </footer>
     </PageLayout>
   );
 };
