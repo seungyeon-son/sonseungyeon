@@ -10,17 +10,17 @@ interface ButtonProps {
 
 const sizeStyles = {
   sm: css`
-    width: 50px;
+    padding: 0 12px;
     height: 32px;
     font-size: 16px;
   `,
   md: css`
-    width: 150px;
+    padding: 0 16px;
     height: 44px;
     font-size: 18px;
   `,
   lg: css`
-    width: 230px;
+    padding: 20px;
     height: 52px;
     font-size: 20px;
   `,
@@ -36,10 +36,14 @@ const ButtonStyle = styled.button<ButtonProps>`
   line-height: 1em;
   min-width: 80px;
   height: 56px;
+  transition: ease-in-out 0.2s;
+  border: 1px solid transparent;
   ${({ size }) => sizeStyles[size]}
 
   &:hover {
-    opacity: 0.9;
+    /* opacity: 0.9; */
+    box-shadow: 0px 0px 16px 6px #b0e9dd4c;
+    border: 1px solid #b0e9dd50;
   }
   &:disabled {
     opacity: 0.5;
@@ -47,8 +51,8 @@ const ButtonStyle = styled.button<ButtonProps>`
   ${({ variant }) =>
     variant === "primary" &&
     css`
-      background-color: #29395d;
-      color: #ccc8db;
+      background-color: #ffffff;
+      color: #658788;
     `}
   ${({ variant }) =>
     variant === "secondary" &&

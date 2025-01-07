@@ -11,7 +11,7 @@ const HeaderArea = styled.header`
   left: 0;
   width: 100%;
   z-index: 9999;
-  mix-blend-mode: difference;
+  mix-blend-mode: color-dodge;
   div.container {
     position: fixed;
     top: 32px;

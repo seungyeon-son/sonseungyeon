@@ -54,7 +54,7 @@ const Panel = styled.div`
   }
 `;
 
-const PostList = styled.ul`
+export const PostList = styled.ul`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
