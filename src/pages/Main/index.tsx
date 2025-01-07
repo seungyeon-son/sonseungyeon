@@ -3,68 +3,82 @@ import Button from "@/src/app/\bcomponents/ui/Button";
 import styled from "@emotion/styled";
 import Image from "next/image";
 
-export const MainSection = styled.div``;
+export const MainSection = styled.div`
+  background-image: linear-gradient(#1e63cc, #dee4ed);
+  div.bg {
+    background-image: radial-gradient(#96b0e345, #87e79d45);
+    padding: 240px 0 120px;
+  }
+`;
 export const WorkSection = styled.div``;
 
 const MainPage = () => {
   return (
     <PageLayout>
-      <MainSection className="dark bg-[linear-gradient(#0f172a_70%,#2a3858_100%)] text-white">
-        <section className="container mx-auto pt-[240px] px-9">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            <div className="space-y-4">
-              <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-                The complete platform for building the Web
-              </h1>
-              <p className="text-lg text-slate-400">
-                Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable.
-                Open Source.
+      <MainSection className="">
+        <div className="bg">
+          <section className="container mx-auto">
+            <div className="flex gap-8 lg:grid-cols-2 items-center justify-between">
+              <div className="space-y-4 !w-fit">
+                <h1 className="font-bold !leading-tight text-white text-4xl sm:text-5xl lg:text-6xl uppercase">
+                  <span className="text-[#D9EBE3]">hello. </span>Interpreting user
+                  <br /> <span className="text-[#D9EBE3]">needs through</span> design <br /> Strategic Product{" "}
+                  <span className="text-[#D9EBE3]">Designer</span>
+                  <br />
+                  Seungyeon Son.
+                </h1>
+              </div>
+              <div className="!w-fit">
+                <p className="w-fit text-5xl leading-tight text-[#DAE4E1] text-right">
+                  ABOUT <br /> UI/UX DESIGN <br /> UI DEVELOP
+                </p>
+                {/* <Image
+                  src="https://generated.vusercontent.net/placeholder.svg"
+                  width="550"
+                  height="550"
+                  alt="Hero"
+                  className="aspect-square overflow-hidden rounded-xl object-cover"
+                /> */}
+              </div>
+            </div>
+            <div className="my-24">
+              <p className="text-lg text-slate-600 mb-10">
+                Beautifully designed components that you can copy and paste into your apps. <br />
+                Accessible. Customizable. Open Source.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
-                <Button size="sm" variant="primary" value="" disabled={false}>
+                <Button size="md" variant="primary" value="" disabled={false}>
                   Get Started
                 </Button>
-                <Button size="sm" variant="primary" value="" disabled={false}>
-                  Learn More
-                </Button>
               </div>
             </div>
-            <div className="flex justify-center">
-              <Image
-                src="https://generated.vusercontent.net/placeholder.svg"
-                width="550"
-                height="550"
-                alt="Hero"
-                className="aspect-square overflow-hidden rounded-xl object-cover"
-              />
-            </div>
-          </div>
-        </section>
-        <section className="container mx-auto pb-16 px-9">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="space-y-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
-                {/* <IconAuto /> */}
+          </section>
+          <section className="container mx-auto">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="space-y-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
+                  {/* <IconAuto /> */}
+                </div>
+                <h3 className="text-xl font-bold">Collaboration</h3>
+                <p className="text-slate-400">Make collaboration seamless with built-in code review tools.</p>
               </div>
-              <h3 className="text-xl font-bold">Collaboration</h3>
-              <p className="text-slate-400">Make collaboration seamless with built-in code review tools.</p>
-            </div>
-            <div className="space-y-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
-                {/* <BotIcon className="h-6 w-6 text-primary-foreground" /> */}
+              <div className="space-y-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
+                  {/* <BotIcon className="h-6 w-6 text-primary-foreground" /> */}
+                </div>
+                <h3 className="text-xl font-bold">Automation</h3>
+                <p className="text-slate-400">Automate your workflow with continuous integration.</p>
               </div>
-              <h3 className="text-xl font-bold">Automation</h3>
-              <p className="text-slate-400">Automate your workflow with continuous integration.</p>
-            </div>
-            <div className="space-y-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
-                {/* <ScaleIcon className="h-6 w-6 text-primary-foreground" /> */}
+              <div className="space-y-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
+                  {/* <ScaleIcon className="h-6 w-6 text-primary-foreground" /> */}
+                </div>
+                <h3 className="text-xl font-bold">Scale</h3>
+                <p className="text-slate-400">Deploy to the cloud with a single click and scale with ease.</p>
               </div>
-              <h3 className="text-xl font-bold">Scale</h3>
-              <p className="text-slate-400">Deploy to the cloud with a single click and scale with ease.</p>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </MainSection>
       <WorkSection className="py-24 bg-slate-800">
         <div className="container mx-auto px-9">
