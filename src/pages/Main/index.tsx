@@ -30,7 +30,7 @@ const MainPage = () => {
               </div>
               <div className="!w-fit">
                 <p className="w-fit text-5xl leading-tight text-[#DAE4E1] text-right">
-                  ABOUT <br /> UIUX DESIGN <br /> UI DEVELOP
+                  ABOUT <br /> UI/UX DESIGN <br /> UI DEVELOP
                 </p>
                 {/* <Image
                   src="https://generated.vusercontent.net/placeholder.svg"
