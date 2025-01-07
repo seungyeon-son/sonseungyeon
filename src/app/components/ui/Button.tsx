@@ -11,15 +11,18 @@ interface ButtonProps {
 const sizeStyles = {
   sm: css`
     width: 50px;
-    height: 30px;
+    height: 32px;
+    font-size: 16px;
   `,
   md: css`
     width: 150px;
-    height: 30px;
+    height: 44px;
+    font-size: 18px;
   `,
   lg: css`
     width: 230px;
-    height: 30px;
+    height: 52px;
+    font-size: 20px;
   `,
 };
 
@@ -58,7 +61,6 @@ const ButtonStyle = styled.button<ButtonProps>`
     css`
       background-color: transparent;
       color: white;
-      border: 1px solid black;
     `}
   ${({ variant }) =>
     variant === "white" &&

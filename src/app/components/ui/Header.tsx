@@ -6,27 +6,23 @@ import styled from "styled-components";
 import Button from "./Button";
 
 const HeaderArea = styled.header`
-  position: absolute;
-  left: 0;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 9999;
   mix-blend-mode: difference;
   div.container {
     position: fixed;
-    top: 48px;
+    top: 32px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 50;
-    width: calc(100% - 72px);
-    max-width: 1464px;
-    height: 64px;
+    height: 48px;
     border-radius: 12px;
-    background: linear-gradient(90deg, rgba(51, 65, 85, 0.5) 0%, rgba(148, 151, 189, 0.25) 100%);
-    box-shadow: 0px 4px 10px 1px rgb(49 55 56 / 50%);
-    backdrop-filter: blur(20px);
-    margin: 0 auto;
-    padding: 0 48px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(148, 151, 189, 0) 100%);
+    /* box-shadow: 0px 4px 20px 1px rgb(49 55 56 / 15%); */
+    /* backdrop-filter: blur(20px); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,26 +49,27 @@ export const Navigation = () => {
   return (
     <HeaderArea>
       <div className="container">
-        <Link href="/" className="text-white" prefetch={false} aria-label="Home">
-          Logo
+        <Link href="/" className="text-slate-300" prefetch={false} aria-label="Home">
+          SSY
         </Link>
-        <nav className="hidden md:flex items-center space-x-10">
+        <nav className="hidden md:flex items-center justify-between space-x-20">
           <Link href="/about" className="text-slate-300 hover:text-slate-50 transition-colors" prefetch={false}>
-            About
+            ABOUT
           </Link>
           <Link href="/archive" className="text-slate-300 hover:text-slate-50 transition-colors" prefetch={false}>
-            Work
+            WORKS
           </Link>
-          <Button aria-label="Menu" size="sm" variant="primary" value="" disabled={false}>
+          <Button aria-label="Menu" size="sm" variant="ghost" value="" disabled={false}>
             <Link
               href="mailto:au1gust8@gmail.com"
               target="_blank"
               className="text-slate-300 hover:text-slate-50 transition-colors"
             >
-              Contact
+              CONTACT
             </Link>
           </Button>
         </nav>
+        <p className="text-slate-300">PORTFOLIO</p>
       </div>
     </HeaderArea>
   );

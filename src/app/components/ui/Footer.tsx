@@ -8,7 +8,7 @@ const FooterArea = styled.footer`
   gap: 8px;
   padding: 40px 24px;
   width: 100%;
-  background: #293856;
+  background: #ffffff;
   align-items: center;
 `;
 
