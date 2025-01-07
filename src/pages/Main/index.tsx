@@ -2,9 +2,10 @@ import PageLayout from "@/src/app/\bcomponents/layout/subLayout";
 import PostItemComponent from "@/src/app/\bcomponents/postItem";
 import Button from "@/src/app/\bcomponents/ui/Button";
 import { archivePosts } from "@/src/app/lib/data";
+import Link from "next/link";
 import styled from "@emotion/styled";
 import Image from "next/image";
-import Link from "next/link";
+
 import { PostList } from "../archive";
 
 export const MainSection = styled.div`
@@ -52,7 +53,7 @@ const MainPage = () => {
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Button size="lg" variant="primary" value="" disabled={false}>
-                  <a href="/archive">View Works</a>
+                  <Link href="/archive">View Works</Link>
                 </Button>
               </div>
             </div>
